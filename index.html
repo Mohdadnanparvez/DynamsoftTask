@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Web TWAIN Demo</title>
+    <script src="Resources/dynamsoft.webtwain.initiate.js"></script>
+    <script src="Resources/dynamsoft.webtwain.config.js"></script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body onload="initializeDWT();">
+    <div class="container">
+        <div class="image-viewer" id="parent">
+            <div id="dwtcontrolContainer"></div>
+        </div>
+        <div class="controls">        
+            <h2>Select Source</h2>
+            <select id="sourceSelect"></select>
+            <div>
+                <label>
+                    <input type="checkbox" id="showUI" checked> Show UI
+                </label>
+                <label>
+                    <input type="checkbox" id="autoFeeder"> AutoFeeder
+                </label>
+            </div>
+            <div>
+                <span>Pixel Type:</span>
+                <label><input type="radio" name="pixelType" value="1"> Black & White</label>
+                <label><input type="radio" name="pixelType" value="2" checked> Gray</label>
+                <label><input type="radio" name="pixelType" value="3"> Color</label>
+            </div>
+            <label for="resolution">Resolution:</label>
+            <select id="resolution">
+                <option value="100">100 DPI</option>
+                <option value="200">200 DPI</option>
+                <option value="300" selected>300 DPI</option>
+            </select>
+            <button onclick="scanAndSavePDF()">Scan and Save 1</button>
+            <button onclick="scanAndSaveIndividualPDFs()">Scan and Save 2</button>
+            <button onclick="removeBlankImages()">Remove Blank Images</button>
+            <button onclick="removeAllImages()">Remove All Images</button>
+        </div>
+    </div>
+</body>
+
+</html>

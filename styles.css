@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.image-viewer {
+    width: 60%;
+    height: 500px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+
+.controls {
+    width: 35%;
+}
+
+.controls h2 {
+    margin-top: 0;
+}
+
+.controls select,
+.controls button {
+    margin: 10px 0;
+    width: 100%;
+}
